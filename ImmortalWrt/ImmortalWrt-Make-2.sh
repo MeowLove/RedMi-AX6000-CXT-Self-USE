@@ -22,3 +22,17 @@ sed -i 's/ImmortalWrt/CXT-WLAN-HIDE/g' package/kernel/mac80211/files/lib/wifi/ma
 
 # 修改 时区
 sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Hong_Kong'/g" package/base-files/files/bin/config_generate
+
+# 修改 Uhttpd端口为12096，并允许Wan口访问（未放行防火墙）
+sed -i 's/:80/:12096/g' package/network/services/uhttpd/files/uhttpd.config
+sed -i 's/rfc1918_filter 1/rfc1918_filter 0/g' package/network/services/uhttpd/files/uhttpd.config
+
+# 防火墙 Wan口放行uhttpd端口12096进入
+echo "
+config rule
+        option name 'uhttpd-12096-in'
+        option target 'ACCEPT'
+        option src 'wan'
+        option proto 'tcp udp'
+        option dest_port '12096'
+" >> package/network/config/firewall/files/firewall.config
