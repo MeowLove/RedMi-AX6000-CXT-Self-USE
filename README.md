@@ -25,7 +25,15 @@ git clone https://github.com/hanwckf/immortalwrt-mt798x.git
 
 
 ### 添加的插件
-#### 1、待确定
+#### 1、列表如下：
+##### 系统级
+```bash
+autocore base-files bash block-mount btop busybox ca-bundle coremark curl dnsmasq-full dropbear ds-lite firewall fitblk fstools htop kmod-crypto-hw-safexcel kmod-gpio-button-hotplug kmod-ipt-nat kmod-ipt-nat6 kmod-leds-gpio kmod-leds-ws2812b kmod-lib-zstd kmod-mt7915e kmod-mt7986-firmware kmod-mtd-rw kmod-phy-aquantia kmod-tcp-bbr libc libgcc libustream-mbedtls logd
+```
+##### 软件级
+```bash
+luci-app-acl luci-app-adguardhome luci-app-advancedplus luci-app-argon-config luci-app-arpbind luci-app-autoreboot luci-app-autotimeset luci-app-cifs-mount luci-app-ddns luci-app-ddns-go luci-app-easymesh luci-app-eqosplus luci-app-fan luci-app-fileassistant luci-app-firewall luci-app-frps luci-app-ksmbd luci-app-mwan3 luci-app-netspeedtest luci-app-nginx-manager luci-app-nlbwmon luci-app-ocserv luci-app-opkg luci-app-ramfree luci-app-socat luci-app-softethervpn luci-app-sqm luci-app-store luci-app-syncdial luci-app-tailscale luci-app-ttyd luci-app-turboacc luci-app-upnp luci-app-vlmcsd luci-app-vsftpd luci-app-wechatpush luci-app-wireguard luci-app-wizard luci-app-wolplus luci-app-wrtbwmon luci-app-zerotier luci-base luci-compat luci-lib-fs luci-lib-ipkg 
+```
 
 #### 2、优选kiddin9的openwrt-packages作为第三方扩展库
 ```bash
