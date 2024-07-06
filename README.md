@@ -10,13 +10,32 @@
 
 
 ### 使用的源码
-#### 1、待补充  
+#### 1、待确定
 ##### 计划分别试试各位大佬的源码，还在选型，暂未确定。
+
+#### 2、先试试LEDE作为底包
+```bash
+git clone https://github.com/coolsnowwolf/lede
+```
+
+#### 3、再试试immortalwrt-mt798x作为底包
+```bash
+git clone https://github.com/hanwckf/immortalwrt-mt798x.git
+```
 
 
 ### 添加的插件
-#### 1、待补充
+#### 1、待确定
 
+#### 2、先试试kenzok8的small-package作为第三方扩展库
+```bash
+sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
+```
+#### 3、再试试kiddin9的openwrt-packages作为第三方扩展库
+https://github.com/kiddin9/openwrt-packages
+```bash
+sed -i '$a src-git k9package https://github.com/kiddin9/openwrt-packages' feeds.conf.default
+```
 
 ### 其他说明
 #### 1、设置为LF文件末尾，因为在Linux下编译
