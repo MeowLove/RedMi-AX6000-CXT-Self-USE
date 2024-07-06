@@ -23,7 +23,6 @@ env:
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Asia/Hong_Kong
-  OPENWRT_NAME: CXT-FireWall
 
 jobs:
   build:
