@@ -17,3 +17,16 @@
 ### 添加的插件
 #### 1、待补充
 
+
+### 其他说明
+#### 1、设置为LF文件末尾，因为在Linux下编译
+###### This diff contains a change in line endings from 'LF' to 'CRLF'.
+##### ①安装GitHub Desktop和Git工具，使用Git打开源码目录
+###### ~/Documents/GitHub/RedMi-AX6000-CXT-Self-USE
+##### ②设置'CRLF' to 'LF'
+###### git config core.autocrlf input
+
+<!-- ###### 要将行尾格式设置为“LF”，可以执行以下命令：
+###### git config --global core.autocrlf input
+###### Windows想要保留“CRLF”，则可以使用：
+###### git config --global core.autocrlf true -->
