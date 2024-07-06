@@ -27,13 +27,14 @@ git clone https://github.com/hanwckf/immortalwrt-mt798x.git
 ### 添加的插件
 #### 1、待确定
 
-#### 2、先试试kenzok8的small-package作为第三方扩展库
-```bash
-sed -i '$a src-git sm_package https://github.com/kenzok8/small-package' feeds.conf.default
-```
-#### 3、再试试kiddin9的openwrt-packages作为第三方扩展库
+#### 2、优选kiddin9的openwrt-packages作为第三方扩展库
 ```bash
 sed -i '$a src-git k9_package https://github.com/kiddin9/openwrt-packages' feeds.conf.default
+```
+
+#### 3、备选kenzok8的small-package作为第三方扩展库
+```bash
+sed -i '$a src-git sm_package https://github.com/kenzok8/small-package' feeds.conf.default
 ```
 
 ### 其他说明
