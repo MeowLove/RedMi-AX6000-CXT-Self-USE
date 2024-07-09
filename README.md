@@ -9,7 +9,8 @@
 ```bash
 公网访问地址为：http://wan-ip:12096/
 内网访问地址为：http://10.188.8.1:12096/
-*Web管理员密码：cxthhhhh.com
+*管理员账号：root
+*管理员密码：cxthhhhh.com
 ```
 
 #### 2、WLAN的SSID，2.4G接入智能物联设备,5G接入手机电脑。即：
@@ -19,7 +20,9 @@ CXT-WLAN-HIDE-2.4G
 CXT-WLAN-HIDE-5G
 *WLAN的初始密码为空，请尽快设置
 ```
-
+##### 建议修改2.4G-WLAN后，隐藏SSID，供智能物联设备使用（摄像头、空调、门禁等）。
+##### Only保留5G-WLAN，可选隐藏SSID，供自己家人使用（手机、电脑、平板等）。
+##### 访客WIFI，我还在研究（博主写了一个OpenWRT系统下的脚本，但是没研究如何在编译时生效）。
 
 ### 预览图
 
@@ -51,7 +54,7 @@ git clone https://github.com/coolsnowwolf/lede
 ##### 闭源固件插件
 
 ```bash
-待修好编译Bug后，进行整理
+luci-app-acl luci-app-adguardhome luci-app-advancedplus luci-app-arpbind luci-app-autoreboot luci-app-autotimeset luci-app-cifs-mount luci-app-ddns luci-app-ddns-go luci-app-diskman luci-app-easymesh luci-app-eqos-mtk luci-app-fileassistant luci-app-filetransfer luci-app-firewall luci-app-frps luci-app-ksmbd luci-app-mtwifi-cfg luci-app-netspeedtest luci-app-nlbwmon luci-app-openclash luci-app-opkg luci-app-ramfree luci-app-socat luci-app-sqm luci-app-store luci-app-tailscale luci-app-ttyd luci-app-turboacc-mtk luci-app-upnp luci-app-vlmcsd luci-app-vsftpd luci-app-wechatpush luci-app-wolplus luci-app-zerotier
 ```
 
 ##### 开源固件插件
