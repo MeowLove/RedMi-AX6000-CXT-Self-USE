@@ -17,8 +17,12 @@ sed -i 's/ImmortalWrt/CXT-FireWall/g' package/base-files/files/bin/config_genera
 sed -i '1d' package/base-files/files/etc/shadow
 sed -i '1i\root:$1$UIl1uSg0$tAW9qjOqoCto0CIUgUwHT1:0:0:99999:7:::' package/base-files/files/etc/shadow
 
-# 修改 WIFI SSID 
+# 修改 WIFI SSID
 sed -i 's/ImmortalWrt/CXT-WLAN-HIDE/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i "s/ImmortalWrt-2.4G/CXT-WLAN-HIDE-2.4G/g" package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
+sed -i "s/ImmortalWrt-5G/CXT-WLAN-HIDE-5G/g" package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
+sed -i "s/MT7986_AX6000_2.4G/CXT-WLAN-HIDE-2.4G/g" package/mtk/drivers/wifi-profile/files/mt7981/mt7981.dbdc.b0.dat
+sed -i "s/MT7986_AX6000_5G/CXT-WLAN-HIDE-5G/g" package/mtk/drivers/wifi-profile/files/mt7981/mt7981.dbdc.b1.dat
 
 # 修改 时区
 sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Hong_Kong'/g" package/base-files/files/bin/config_generate
