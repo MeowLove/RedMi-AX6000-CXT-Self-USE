@@ -6,6 +6,7 @@
 
 # 修改 网关IP
 sed -i 's/192.168.1.1/10.188.8.1/g' package/base-files/files/bin/config_generate
+sed -i 's/255.255.255.0/255.255.248.0/g' package/base-files/files/bin/config_generate
 
 # 修改 界面主题
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
@@ -25,7 +26,7 @@ sed -i "s/MT7986_AX6000_2.4G/CXT-WLAN-HIDE-2.4G/g" package/mtk/drivers/wifi-prof
 sed -i "s/MT7986_AX6000_5G/CXT-WLAN-HIDE-5G/g" package/mtk/drivers/wifi-profile/files/mt7981/mt7981.dbdc.b1.dat
 
 # 修改 时区
-sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Hong_Kong'/g" package/base-files/files/bin/config_generate
+sed -i "s/'UTC'/'CST-8'\n                set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 
 # 修改 Uhttpd端口为12096，并允许Wan口访问（未放行防火墙）
 sed -i 's/:80/:12096/g' package/network/services/uhttpd/files/uhttpd.config
